@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DB Connected</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/app.css') }}">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">School Manager</a>
+                {% if session_user_name %}
+                <a class="navbar-brand" href="#">Hello {{ session_user_name }}</a>
+                {% endif %}
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+                {% if session_user_name %}
+                <li class="nav-item"><a href="{{ url_for('logout') }}" class="nav-link">Logout</a></li>
+                <li class="nav-item"><a href="/add_user" class="nav-link">Add New</a></li>
+                <li class="nav-item"><a href="/users" class="nav-link">Users</a></li>
+                <li class="nav-item"><a href="/profiles" class="nav-link">Profiles</a></li>
+                {% endif %}
+                {% if not session_user_name %}
+                <li class="nav-item">
+                    <a href="{{ url_for('login') }}" class="nav-link">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+            <div class=" navbar-dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {% if not session_user_name %}
+        <h2 class="font-weight-light text-center text-lg-left mt-4 mb-0">Welcome to the School Manager Python Application</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

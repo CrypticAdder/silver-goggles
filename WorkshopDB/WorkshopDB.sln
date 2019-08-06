@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WorkshopDB", "WorkshopDB\WorkshopDB.pyproj", "{76A7874B-7584-41C0-BC14-6B75DF5719DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76A7874B-7584-41C0-BC14-6B75DF5719DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A7874B-7584-41C0-BC14-6B75DF5719DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A7874B-7584-41C0-BC14-6B75DF5719DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A7874B-7584-41C0-BC14-6B75DF5719DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75861D5B-57D1-4578-947D-2AA22DFD778C}
+	EndGlobalSection
+EndGlobal
